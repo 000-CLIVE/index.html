@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentine Question 💘</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 25px;
+      margin: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .yes {
+      background: #4caf50;
+      color: white;
+    }
+
+    .no {
+      background: #f44336;
+      color: white;
+    }
+
+    .rabbit {
+      font-size: 80px;
+      margin-top: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    .angry {
+      animation: shake 0.4s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>Zainab 💖</h1>
+    <p>Will you be my Valentine?</p>
+    <button class="yes" onclick="sayYes()">Yes</button>
+    <button class="no" onclick="sayNo()">No</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("card").innerHTML = `
+        <h1>Yaaay! 💕</h1>
+        <div class="rabbit">🐰</div>
+        <p><strong>I am honoured</strong></p>
+      `;
+    }
+
+    function sayNo() {
+      document.getElementById("card").innerHTML = `
+        <h1>Hey! 😠</h1>
+        <div class="rabbit angry">🐰</div>
+        <p><strong>kutakuwa na kuku, sema YES 😤</strong></p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
